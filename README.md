@@ -58,18 +58,6 @@ The dataset reveals that fraud is **extremely rare (0.17%)**, making detection m
 - Executive summary reporting
 
 ---
-
-Sections:
-
-* Key Insights
-* Executive Overview
-* Time-Based Fraud Analysis
-* Category & Merchant Insights
-* Risk Segmentation
-* Business Recommendation
-* Project Outcomes
-
----
 ## 📈 Key KPIs
 
 | KPI | Value |
