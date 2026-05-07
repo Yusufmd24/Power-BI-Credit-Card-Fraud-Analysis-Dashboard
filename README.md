@@ -21,7 +21,8 @@ The dataset reveals that fraud is **extremely rare (0.17%)**, making detection m
 ---
 ⚙️ Technical Architecture / Workflow
 
-<img width="1536" height="1024" alt="Technical architecture" src="https://github.com/user-attachments/assets/c1f6c04c-139a-4a52-8d2f-c3aa61066e3a" />
+<img width="1536" height="1024" alt="Tech Arch" src="https://github.com/user-attachments/assets/fdce39d4-bf28-4d7b-a9bd-afff455ec6bb" />
+
 
 ---
 ## 🧠 Analytical Techniques Used
