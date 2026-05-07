@@ -24,7 +24,16 @@ The dataset reveals that fraud is **extremely rare (0.17%)**, making detection m
 <img width="1536" height="1024" alt="Technical architecture" src="https://github.com/user-attachments/assets/c1f6c04c-139a-4a52-8d2f-c3aa61066e3a" />
 
 ---
+## 🧠 Analytical Techniques Used
 
+- Time-based fraud trend analysis
+- Merchant-level fraud concentration analysis
+- Category risk segmentation
+- KPI modeling using DAX
+- Fraud pattern identification
+- Interactive filtering and drilldown analysis
+- 
+---
 ## 🎯 Key Business Questions
 
 1. When does fraud activity peak during the day?
@@ -36,6 +45,19 @@ The dataset reveals that fraud is **extremely rare (0.17%)**, making detection m
 ## 📸 Dashboard Overview
 
 ![Dashboard Overview](Images/Dashboard.png)
+
+---
+
+## 🎛️ Dashboard Features
+
+- Interactive slicers and filtering
+- Dynamic KPI cards
+- Time-based fraud trend analysis
+- Merchant-level risk analysis
+- Category segmentation visuals
+- Executive summary reporting
+
+---
 
 Sections:
 
@@ -148,24 +170,36 @@ Sections:
 
 ---
 
-## 🚀 Project Outcome
+## 🚀 Business Impact
 
-This project evolves beyond a dashboard into a **Fraud Risk Intelligence System** that:
-
-* Identifies **when fraud is most likely to occur**
-* Detects **high-risk categories and merchant clusters**
-* Enables **targeted, data-driven fraud prevention strategies**
+This solution enables stakeholders to:
+- identify high-risk fraud windows,
+- prioritize monitoring resources,
+- improve fraud detection precision,
+- and support proactive risk mitigation strategies through data-driven intelligence.
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-* Power BI (Dashboarding & Visualization)
-* DAX (Custom Measures & KPIs)
-* Data Analysis Techniques
+| Tool | Purpose |
+|---|---|
+| Power BI | Dashboard Development & Visualization |
+| DAX | KPI Measures & Risk Metrics |
+| Power Query | Data Cleaning & Transformation |
+| Excel / CSV | Raw Data Source |
 
 ---
+## 🔮 Future Enhancements
 
+- Real-time fraud alert integration
+- Machine learning-based anomaly detection
+- Dynamic fraud risk scoring
+- Cloud-based deployment pipeline
+- Transaction-level drillthrough analytics
+
+
+---
 ## 📌 Author
 
 **Yusuf M**
