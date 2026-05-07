@@ -19,6 +19,10 @@ The dataset contains anonymized credit card transactions with the following key 
 The dataset reveals that fraud is **extremely rare (0.17%)**, making detection more challenging and emphasizing the need for **pattern-based analysis rather than volume-based assumptions**.
 
 ---
+⚙️ Technical Architecture / Workflow
+<img width="1536" height="1024" alt="Technical architecture" src="https://github.com/user-attachments/assets/c1f6c04c-139a-4a52-8d2f-c3aa61066e3a" />
+
+---
 
 ## 🎯 Key Business Questions
 
