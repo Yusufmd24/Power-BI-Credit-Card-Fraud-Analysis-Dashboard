@@ -48,7 +48,17 @@ Sections:
 * Project Outcomes
 
 ---
+## 📈 Key KPIs
 
+| KPI | Value |
+|---|---|
+| Fraud Rate | 0.17% |
+| Highest Risk Window | 12 AM – 4 AM |
+| Highest Risk Category | Grocery |
+| Top Risk Merchants | Swiggy, Zomato |
+| Fraud Pattern Type | Time & Merchant Concentrated |
+
+---
 ## 🔍 Key Insights
 
 ### ⏱️ Time-Based Fraud Patterns
