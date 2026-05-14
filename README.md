@@ -1,198 +1,178 @@
-# 💳 Credit Card Fraud Risk Intelligence & Prevention System
+# Credit Card Fraud Risk Intelligence System
+### Power BI · DAX · Power Query · Excel
 
-## 📌 Problem Statement
-
-Financial fraud poses a significant challenge for digital payment systems, often occurring in subtle patterns that are difficult to detect through basic reporting.
-This project aims to analyze transaction data to uncover **hidden fraud patterns**, identify **high-risk segments**, and deliver **actionable strategies** to minimize fraud exposure.
-
----
-
-## 📊 Dataset Overview
-
-The dataset contains anonymized credit card transactions with the following key attributes:
-
-* Transaction Time (Hourly granularity)
-* Transaction Category (e.g., Grocery, etc.)
-* Merchant Information (e.g., Swiggy, Zomato)
-* Fraud Indicator (Fraud / Non-Fraud)
-
-The dataset reveals that fraud is **extremely rare (0.17%)**, making detection more challenging and emphasizing the need for **pattern-based analysis rather than volume-based assumptions**.
-
----
-⚙️ Technical Architecture / Workflow
-
-<img width="1536" height="1024" alt="Tech Arch" src="https://github.com/user-attachments/assets/fdce39d4-bf28-4d7b-a9bd-afff455ec6bb" />
-
-
----
-## 🧠 Analytical Techniques Used
-
-- Time-based fraud trend analysis
-- Merchant-level fraud concentration analysis
-- Category risk segmentation
-- KPI modeling using DAX
-- Fraud pattern identification
-- Interactive filtering and drilldown analysis
-- 
----
-## 🎯 Key Business Questions
-
-1. When does fraud activity peak during the day?
-2. Which categories and merchants are most vulnerable to fraud?
-3. How can fraud risk be reduced despite a very low fraud rate?
+![Tool](https://img.shields.io/badge/Tool-Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![Domain](https://img.shields.io/badge/Domain-BFSI%20%7C%20Risk%20Analytics-blue?style=flat)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)
 
 ---
 
-## 📸 Dashboard Overview
+## Problem Statement
+
+In digital payment systems, fraud rarely announces itself through volume — it hides in patterns.
+With a fraud rate of just **0.17%**, blanket detection rules fail. This project builds a
+**pattern-based fraud intelligence system** that identifies *when*, *where*, and *how* fraud
+concentrates — enabling risk teams to allocate monitoring resources with surgical precision
+rather than broad filtering.
+
+---
+
+## Dataset
+
+| Attribute | Detail |
+|---|---|
+| Source | Anonymized credit card transaction records |
+| Granularity | Hourly transaction-level |
+| Key Dimensions | Time, Category, Merchant, Fraud Indicator |
+| Class Imbalance | 0.17% fraud — extreme imbalance, pattern-first approach required |
+
+---
+
+## Technical Architecture
+
+![Technical Architecture](https://github.com/user-attachments/assets/fdce39d4-bf28-4d7b-a9bd-afff455ec6bb)
+
+---
+
+## Business Questions Answered
+
+1. When does fraud activity peak — and why does that window matter operationally?
+2. Which transaction categories and merchants carry disproportionate fraud risk?
+3. How should a risk team prioritize limited monitoring resources given a low base fraud rate?
+
+---
+
+## Analytical Approach
+
+- Time-series fraud trend analysis (hourly bucketing)
+- Merchant-level fraud concentration ranking
+- Category risk segmentation with volume-adjusted fraud rates
+- DAX-driven KPI modeling (fraud rate, risk index, trend flags)
+- Interactive slicer/drilldown design for operational use
+
+---
+
+## Dashboard
 
 ![Dashboard Overview](Images/Dashboard.png)
 
----
-
-## 🎛️ Dashboard Features
-
-- Interactive slicers and filtering
-- Dynamic KPI cards
-- Time-based fraud trend analysis
-- Merchant-level risk analysis
-- Category segmentation visuals
-- Executive summary reporting
+**Features:** Dynamic KPI cards · Time-trend visuals · Merchant risk ranking · Category segmentation · Executive summary view
 
 ---
-## 📈 Key KPIs
+
+## Key KPIs
 
 | KPI | Value |
 |---|---|
-| Fraud Rate | 0.17% |
-| Highest Risk Window | 12 AM – 4 AM |
-| Highest Risk Category | Grocery |
+| Overall Fraud Rate | 0.17% |
+| Peak Risk Window | 12 AM – 4 AM |
+| Highest Risk Category | Grocery (~55% of fraud cases) |
 | Top Risk Merchants | Swiggy, Zomato |
-| Fraud Pattern Type | Time & Merchant Concentrated |
-
----
-## 🔍 Key Insights
-
-### ⏱️ Time-Based Fraud Patterns
-
-* Fraud activity is **highly concentrated between 12 AM and 4 AM**
-* This suggests fraudsters exploit **low monitoring periods and reduced user vigilance**
-
-👉 Insight:
-
-> Fraud is not random—it is **time-targeted**, indicating behavioral intent rather than coincidence.
+| Fraud Concentration Type | Time-targeted & Merchant-clustered |
 
 ---
 
-### 🛒 Category Risk Analysis
+## Key Findings
 
-* The **Grocery category contributes ~55% of total fraud cases**, making it the most vulnerable segment
-* This indicates either:
+### Time-Based Concentration
+Fraud activity is **heavily concentrated between 12 AM and 4 AM**, suggesting deliberate
+exploitation of low-monitoring windows — not random occurrence.
 
-  * High transaction volume masking fraud
-  * OR weaker validation mechanisms in this category
-
-👉 Insight:
-
-> Fraud is **category-concentrated**, not evenly distributed across transactions.
+> **Implication:** Fraud is behaviorally timed. Detection models must weight time-of-day as a
+> primary risk signal, not a secondary filter.
 
 ---
 
-### 🏪 Merchant-Level Risk
+### Category Skew
+The **Grocery category accounts for ~55% of all fraud cases** — a rate far exceeding its
+likely transaction share — indicating either weaker validation mechanisms or higher exposure
+to stolen credentials in this category.
 
-* Platforms like **Swiggy and Zomato** emerge as **top contributors to fraudulent transactions**
-* This suggests:
-
-  * High-frequency usage environments
-  * Faster transactions with lower friction
-
-👉 Insight:
-
-> Fraud clusters around **high-velocity, low-friction platforms**
+> **Implication:** Category-level risk controls should be calibrated independently, not applied uniformly.
 
 ---
 
-### ⚠️ Low Fraud Rate, High Impact
+### Merchant Clustering
+**Swiggy and Zomato** emerge as the leading merchant contributors to fraudulent transactions —
+consistent with high-frequency, low-friction transaction environments where velocity is high
+and review windows are short.
 
-* Overall fraud rate is only **0.17%**, which is extremely low
-* However:
-
-  * Fraud is **strategically concentrated**
-  * A small subset of transactions drives most of the risk
-
-👉 Insight:
-
-> Fraud detection should focus on **precision targeting**, not broad filtering
+> **Implication:** Merchant-specific risk scoring should feed real-time decisioning, not just
+> periodic review.
 
 ---
 
-## 💡 Business Recommendations
+## Business Recommendations (Priority-Ordered)
 
-### 🔐 Strengthen Monitoring During High-Risk Hours
+| Priority | Action | Target |
+|---|---|---|
+| 🔴 High | Deploy real-time anomaly alerts for 12 AM – 4 AM window | Ops / Risk team |
+| 🔴 High | Implement adaptive authentication for Grocery category | Product / Payments |
+| 🟡 Medium | Apply dynamic risk scoring to Swiggy & Zomato transactions | Merchant Risk |
+| 🟡 Medium | Shift detection logic to time + category + merchant signal combination | Analytics |
+| 🟢 Low | Build transaction-level drillthrough for investigator workflows | Fraud Ops |
 
-* Increase fraud detection sensitivity between **12 AM – 4 AM**
-* Implement real-time alerts and anomaly detection during this window
-
----
-
-### 🛒 Apply Category-Based Risk Controls
-
-* Introduce stricter validation for **Grocery transactions**
-* Use adaptive authentication for high-risk categories
-
----
-
-### 🏪 Monitor High-Risk Merchant Platforms
-
-* Flag transactions from **Swiggy and Zomato** for additional verification
-* Apply dynamic risk scoring based on merchant behavior
+Estimated impact: Precision-targeted controls on the top risk window + category could
+intercept a disproportionate share of fraud volume while minimizing friction for legitimate
+users.
 
 ---
 
-### 📊 Shift to Risk-Based Detection Strategy
+## Business Impact
 
-* Since fraud rate is low (0.17%), avoid blanket rules
-* Focus on:
+This system equips fraud and risk teams to:
 
-  * Time-based triggers
-  * Category-based anomalies
-  * Merchant-level risk concentration
-
----
-
-## 🚀 Business Impact
-
-This solution enables stakeholders to:
-- identify high-risk fraud windows,
-- prioritize monitoring resources,
-- improve fraud detection precision,
-- and support proactive risk mitigation strategies through data-driven intelligence.
+- **Reduce false positive rates** by replacing broad rules with precision-targeted signals
+- **Concentrate monitoring resources** on the 12 AM – 4 AM window where fraud ROI is highest
+- **Prioritize merchant review queues** based on dynamic risk concentration, not static lists
+- **Support executive reporting** with a self-serve dashboard requiring no SQL access
 
 ---
 
-## 🛠️ Tools & Technologies
+## Repo Structure
+````
+credit-card-fraud-intelligence/
+│
+├── Data/
+│   └── transactions.csv               # Raw transaction dataset
+│
+├── Images/
+│   └── Dashboard.png                  # Dashboard screenshot
+│
+├── PowerBI/
+│   └── fraud_intelligence.pbix        # Power BI report file
+│
+├── Docs/
+│   └── dax-measures.md                # Full DAX measure reference
+│
+└── README.md
+````
+---
 
-| Tool | Purpose |
+## Tools & Technologies
+
+| Tool | Role |
 |---|---|
-| Power BI | Dashboard Development & Visualization |
-| DAX | KPI Measures & Risk Metrics |
-| Power Query | Data Cleaning & Transformation |
-| Excel / CSV | Raw Data Source |
+| Power BI | Dashboard development & interactive visualization |
+| DAX | KPI measures, risk index calculation, dynamic filtering |
+| Power Query | Data cleaning, type casting, time-bucket derivation |
+| Excel / CSV | Raw data source |
 
 ---
-## 🔮 Future Enhancements
 
-- Real-time fraud alert integration
-- Machine learning-based anomaly detection
-- Dynamic fraud risk scoring
-- Cloud-based deployment pipeline
-- Transaction-level drillthrough analytics
+## Future Scope
 
-
----
-## 📌 Author
-
-**Yusuf M**
-
-Aspiring Data Analyst focused on solving real-world business problems through data-driven insights
+- Real-time transaction scoring via streaming pipeline (Azure Event Hub / Kafka)
+- ML-based anomaly detection layer (Isolation Forest / XGBoost) to complement rule-based flags
+- Dynamic fraud risk score surfaced as a calculated column for operational use
+- Cloud deployment with scheduled refresh and automated alert distribution
 
 ---
+
+## Author
+
+**Md Yusuf ** · [LinkedIn](#) · [Portfolio](#) · [GitHub](#)
+
+Data Analyst with a background in operational leadership across manufacturing and events —
+bringing a business-problem-first lens to analytics. Focused on BFSI risk intelligence,
+operational analytics, and end-to-end BI delivery.
