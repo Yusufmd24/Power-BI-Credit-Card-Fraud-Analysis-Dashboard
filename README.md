@@ -171,7 +171,7 @@ credit-card-fraud-intelligence/
 
 ## Author
 
-**Md Yusuf ** · [LinkedIn](#) · [Portfolio](#) · [GitHub](#)
+**Md Yusuf ** · [LinkedIn](#) · [Portfolio](https://yusufmd24.github.io/) · [GitHub](#)
 
 Data Analyst with a background in operational leadership across manufacturing and events —
 bringing a business-problem-first lens to analytics. Focused on BFSI risk intelligence,
